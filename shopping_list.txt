@@ -1,0 +1,4 @@
+{"category": {"Fruits": ["apple", "banana"], "Bakery": [], "Dairy": ["milk"], "Others": ["basil", "curry", "egg", "fruits", "tomato"]}, "cost": {"apple": 60.0, "banana": 2.0, "milk": 13.0, "basil": 4.0, "curry": 6.0, "egg": 8.0, "fruits": 9.0, "tomato": 5.0}}
+{"category": {"Fruits": ["banana(Essential)", "apple"], "Bakery": ["bagel(Essential)", "croissant"], "Dairy": [], "Others": ["tangerine", "tulip", "waqtermelon"]}, "cost": {"banana": 3.0, "apple": 9.0, "bagel": 8.0, "croissant": 5.0, "tangerine": 3.0, "tulip": 1.0, "waqtermelon": 6.0}}
+{"category": {"Fruits": ["apple", "banana"], "Bakery": ["bagel"], "Dairy": ["eggs"], "Others": ["crossiant(Essential)", "tomatoes"]}, "cost": {"apple": 34.0, "banana": 2.0, "bagel": 4.0, "eggs": 2.0, "crossiant": 2.0, "tomatoes": 5.0}}
+{"category": {"Fruits": ["apple"], "Bakery": ["bagel"], "Dairy": [], "Others": ["prime"]}, "cost": {"apple": 3.0, "bagel": 4.0, "prime": 5.0}}

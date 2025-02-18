@@ -9,12 +9,9 @@ shopping_categories = {
 }
 item_cost = {}
 
-# if os.path.exists("shopping_list.txt"):
-#     with open("shopping_list.txt", "r") as file:
-#         data = json.load(file)
-#         shopping_categories = data["category"]
-#         item_cost = data["cost"]
-#         print("\033[1;32mPrevious shopping list loaded!\033[0m")
+        # data = json.load(file)
+        # shopping_categories = data["category"]
+        # item_cost = data["cost"]
 while True:
         ask_user = input("Will you like to enter a list of shopping items (y/n) :  " ).lower()
         if ask_user == "n" :
@@ -82,10 +79,6 @@ while True:
         else:
             print('\033[1;31m'+"Your are within your Estimated Budget"+'\033[0m')
 
-        # with open("shopping_list.txt", "w") as file:
-        #     data = {"category": shopping_categories, "cost": item_cost}
-        #     json.dump(data,file)
-        # print("\033[1;32mShopping list saved successfully!\033[0m")
 
 
 
