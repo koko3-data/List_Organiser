@@ -21,14 +21,14 @@ def user_input():
     elif ask_user == 'y':
         print('\033[1;31m' + "Please prioritize urgent items by adding a '!' e.g Orange!, Bagel!" + '\033[0m')
         shop_input = input("Please enter shopping list e.g Orange , Apple (,): ").lower().split(",")
-        print(shop_input)
+        return shop_input
 
 
 
 def sort_input(shop_input):
-    sorted_list = [item.strip() for item in shop_input()]
+    sorted_list = [item.strip() for item in shop_input]
     save_sorted = sorted(set(sorted_list))
-    print(save_sorted)
+    return save_sorted
 
 def essential_item(save_sorted):
     essential = []
@@ -39,13 +39,13 @@ def essential_item(save_sorted):
         else:
             non_essential.append(item)
     sorted_list = essential + non_essential
-    print(sorted_list)
+    return sorted_list,essential
 
 
 def user_budget():
     ask_user_budget = input('\033[1;31m' + "Please give an estimated budget amount for your shopping e.g 100  : " + '\033[0m')
     user_input_budget = float(ask_user_budget)
-    print(user_input_budget)
+    return user_input_budget
 
 def prioritise_item(sorted_list,shopping_categories,essential):
     for item in sorted_list:
@@ -87,8 +87,19 @@ def user_cost(shopping_categories,item_cost,user_input_budget):
         print('\033[1;31m' + f"You are over the budget by {overdrawn_amount}"'\033[0m')
     else:
         print('\033[1;31m' + "Your are within your Estimated Budget" + '\033[0m')
+#
+# def save_file():
 
-def save_file():
 
+while True:
+    my_actual_list = user_input()
+    if not my_actual_list:
+        break
+    else:
+        my_sorted_list = sort_input(my_actual_list)
+        my_essential_list,essential_only = essential_item(my_sorted_list)
+        my_budget_list = user_budget()
+        my_priority_list = prioritise_item(my_essential_list,shopping_categories,essential_only)
+        my_user_cost = user_cost(shopping_categories,item_cost,my_budget_list)
 
 
